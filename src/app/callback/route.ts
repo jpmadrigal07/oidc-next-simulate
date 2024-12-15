@@ -2,12 +2,13 @@ import querystring from 'querystring';
 // Generate a random code_verifier
 const codeVerifier = "3b2ad25620352fb71cde7f6fa68a2c3cf42aa3eaa1fc3fa6ebebc89f02df3b2b";
 
-const PORT = 4000;
 const CLIENT_ID = 'app1';
 const CLIENT_SECRET = 'app1_secret';
-const OIDC_ISSUER = 'https://oidc-dev-gmgue4e7aebca3g8.australiaeast-01.azurewebsites.net';
+// const PORT = 4000;
 // const OIDC_ISSUER = 'http://127.0.0.1:3000';
-const REDIRECT_URI = `https://127.0.0.1:${PORT}/callback`;
+// const REDIRECT_URI = `https://127.0.0.1:${PORT}/callback`;
+const OIDC_ISSUER = 'https://oidc-dev-gmgue4e7aebca3g8.australiaeast-01.azurewebsites.net';
+const REDIRECT_URI = `https://oidc-next-simulate.vercel.app/callback`;
 
 export async function GET(request: Request) {
 
