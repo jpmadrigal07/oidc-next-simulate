@@ -11,12 +11,13 @@ import { redirect } from "next/navigation";
 //   .update(codeVerifier)
 //   .digest('base64url');
 
-const PORT = 4000;
-const CLIENT_ID = 'app1';
 // const CLIENT_SECRET = 'app1_secret';
-const OIDC_ISSUER = 'https://oidc-dev-gmgue4e7aebca3g8.australiaeast-01.azurewebsites.net';
+// const PORT = 4000;
+const CLIENT_ID = 'app1';
 // const OIDC_ISSUER = 'http://127.0.0.1:3000';
-const REDIRECT_URI = `https://127.0.0.1:${PORT}/callback`;
+// const REDIRECT_URI = `https://127.0.0.1:${PORT}/callback`;
+const OIDC_ISSUER = 'https://oidc-dev-gmgue4e7aebca3g8.australiaeast-01.azurewebsites.net';
+const REDIRECT_URI = `https://oidc-next-simulate.vercel.app/callback`;
 
 export default function Home() {
   const authUrl = `${OIDC_ISSUER}/auth?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=openid profile email&code_challenge=4o5ASwChwq-7CPOJutdCvYmZCOe8T_N2dTCCXZgkQtw&code_challenge_method=S256`;
